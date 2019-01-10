@@ -1,12 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'listado-tareas',
   templateUrl: './listado-tareas.component.html',
   styleUrls: ['./listado-tareas.component.css']
 })
 export class ListadoTareasComponent implements OnInit {
-
+  @Input() arrData;
+  eliminarTarea(tarea) {
+    const posicion = this.arrData.indexOf(tarea);
+    this.arrData.splice(posicion, 1);
+  }
   constructor() { }
 
   ngOnInit() {

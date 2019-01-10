@@ -1,3 +1,5 @@
-<p>
-  listado-tareas works!
-</p>
+<div class="tareas" *ngFor="let task of arrData; let n = index">
+  <h3>{{ task }}</h3>
+  <p>Tarea número {{ n +1 }}</p>
+  <button (click)="eliminarTarea(task)">Eliminar</button>
+</div>
