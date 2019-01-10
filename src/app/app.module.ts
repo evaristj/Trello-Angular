@@ -2,10 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { CrearTareaComponent } from './crear-tarea/crear-tarea.component';
+import { ListadoTareasComponent } from './listado-tareas/listado-tareas.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CrearTareaComponent,
+    ListadoTareasComponent
   ],
   imports: [
     BrowserModule

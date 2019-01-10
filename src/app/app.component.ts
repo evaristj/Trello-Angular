@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'trello-prueba';
+  tareas = [];
+  nuevaTarea(inputText) {
+    this.tareas.push(inputText);
+  }
 }

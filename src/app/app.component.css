@@ -1,6 +1,14 @@
 header {
     text-align: center;
-    width: 100vh;
-    height: 100vh;
+    padding: 1em;
     background-image: radial-gradient(ellipse farthest-corner at 45px 45px , #00FFFF 0%, rgba(0, 0, 255, 0) 50%, #0000FF 95%);
+}
+.lista-tareas {
+    display: flex;
+    flex-wrap: wrap;
+}
+.tareas {
+    margin: 0.4em;
+    padding: 0.4em;
+    border: solid black 2px;
 }

@@ -1,3 +1,12 @@
-<header >
+<header>
   <h1>TRELLO PRUEBA</h1>
 </header>
+<div class="crearTarea">
+  <crear-tarea (insertarTarea)="nuevaTarea($event)"></crear-tarea>
+  <div class="lista-tareas">
+    <div class="tareas" *ngFor="let task of tareas; let n = index">
+      <h3>{{ task }}</h3>
+      <p>Tarea número {{ n +1 }}</p>
+    </div>
+  </div>
+</div>
