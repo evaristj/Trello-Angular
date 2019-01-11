@@ -10,5 +10,6 @@ export class AppComponent {
   nuevaTarea(inputText) {
     this.tareas.push(inputText);
     localStorage.setItem('tareas', JSON.stringify(this.tareas));
+    console.log(this.tareas);
   }
 }

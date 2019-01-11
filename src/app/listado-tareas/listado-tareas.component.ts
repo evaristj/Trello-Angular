@@ -11,10 +11,14 @@ export class ListadoTareasComponent implements OnInit {
   eliminarTarea(tarea) {
     const posicion = this.arrData.indexOf(tarea);
     this.arrData.splice(posicion, 1);
+    localStorage.setItem('tareas', JSON.stringify(this.arrData));
+    console.log(this.arrData);
   }
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
+    console.log(this.arrData);
   }
 
 }
