@@ -6,8 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  tareas = [];
+  tareas = JSON.parse(localStorage.getItem('tareas')) || [];
   nuevaTarea(inputText) {
     this.tareas.push(inputText);
+    localStorage.setItem('tareas', JSON.stringify(this.tareas));
   }
 }
