@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./listado-tareas.component.css']
 })
 export class ListadoTareasComponent implements OnInit {
-  @Input() arrData;
+  @Input() arrData: Array<object>;
   eliminarTarea(tarea) {
     const posicion = this.arrData.indexOf(tarea);
     this.arrData.splice(posicion, 1);
