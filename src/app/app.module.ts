@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CrearTareaComponent } from './crear-tarea/crear-tarea.component';
 import { ListadoTareasComponent } from './listado-tareas/listado-tareas.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,7 @@ import { ListadoTareasComponent } from './listado-tareas/listado-tareas.componen
     ListadoTareasComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,6 +3,10 @@
 </header>
 <div class="crearTarea">
   <crear-tarea (insertarTarea)="nuevaTarea($event)"></crear-tarea>
+  <br>
+  <div class="nuevoListado">
+    <button type="submit">Mostrar tareas sin completar</button>
+  </div>
   <div class="lista-tareas">
     <listado-tareas [arrData]="tareas"></listado-tareas>
   </div>
