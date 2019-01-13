@@ -5,9 +5,9 @@
   <crear-tarea (insertarTarea)="nuevaTarea($event)"></crear-tarea>
   <br>
   <div class="nuevoListado">
-    <button type="submit">Mostrar tareas sin completar</button>
+    <no-completadas (taskIncomplete)="tasksIncomplete()"></no-completadas>
   </div>
   <div class="lista-tareas">
-    <listado-tareas [arrData]="tareas"></listado-tareas>
+    <listado-tareas [arrData]="tasks"></listado-tareas>
   </div>
 </div>

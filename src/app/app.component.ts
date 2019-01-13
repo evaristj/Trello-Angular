@@ -9,10 +9,14 @@ import { log } from 'util';
 })
 export class AppComponent {
   tareas: Array<Task> = JSON.parse(localStorage.getItem('tareas'));
+  tasks: Array<Task> = this.tareas;
   nuevaTarea(text) {
     const crearTarea: Task = { text, id: Date.now(), completada: false };
     this.tareas.push(crearTarea);
     localStorage.setItem('tareas', JSON.stringify(this.tareas));
     console.log(this.tareas);
+  }
+  tasksIncomplete() {
+    this.tasks = this.tareas.filter(tarea => tarea.completada === false);
   }
 }

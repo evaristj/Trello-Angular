@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { CrearTareaComponent } from './crear-tarea/crear-tarea.component';
 import { ListadoTareasComponent } from './listado-tareas/listado-tareas.component';
 import { FormsModule } from '@angular/forms';
+import { NoCompletadasComponent } from './no-completadas/no-completadas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CrearTareaComponent,
-    ListadoTareasComponent
+    ListadoTareasComponent,
+    NoCompletadasComponent
   ],
   imports: [
     BrowserModule, FormsModule
