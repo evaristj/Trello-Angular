@@ -6,7 +6,7 @@
 button {
     color: red;
 }
-.true {
+.false {
     opacity: 0.3;
     text-decoration: line-through;
     background: grey;
