@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { log } from 'util';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -12,6 +11,9 @@ export class NoCompletadasComponent implements OnInit {
   @Output() taskIncomplete = new EventEmitter();
   @Output() taskComplete = new EventEmitter();
   @Output() allTasks = new EventEmitter();
+  @Output() textoTarea = new EventEmitter();
+  // tslint:disable-next-line:no-inferrable-types
+  text: string = '';
   tareasSinHacer(id) {
     this.taskIncomplete.emit(id);
   }
@@ -20,6 +22,9 @@ export class NoCompletadasComponent implements OnInit {
   }
   todasTareas() {
     this.allTasks.emit();
+  }
+  buscar() {
+    this.textoTarea.emit(this.text);
   }
   constructor() { }
 

@@ -5,7 +5,8 @@
   <crear-tarea (insertarTarea)="nuevaTarea($event)"></crear-tarea>
   <br>
   <div class="nuevoListado">
-    <no-completadas (taskIncomplete)="tasksIncomplete()" (taskComplete)="tasksComplete()" (allTasks)="allTask()"></no-completadas>
+    <no-completadas (taskIncomplete)="tasksIncomplete()" (taskComplete)="tasksComplete()" 
+    (allTasks)="allTask()" (textoTarea)="buscarTarea($event)"></no-completadas>
   </div>
   <div class="lista-tareas">
     <listado-tareas [arrData]="tasks"></listado-tareas>

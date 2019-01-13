@@ -10,6 +10,8 @@ import { log } from 'util';
 export class AppComponent {
   tareas: Array<Task> = JSON.parse(localStorage.getItem('tareas'));
   tasks: Array<Task> = this.tareas;
+  // tslint:disable-next-line:no-inferrable-types
+  text: string = '';
   nuevaTarea(text) {
     const crearTarea: Task = { text, id: Date.now(), completada: false };
     this.tareas.push(crearTarea);
@@ -23,6 +25,10 @@ export class AppComponent {
     this.tasks = this.tareas.filter(tarea => tarea.completada === true);
   }
   allTask() {
-    this.tasks = this.tareas.filter(tarea => this.tareas);
+    this.tasks = this.tareas;
+  }
+  buscarTarea(text: string) {
+    this.text = text;
+    this.tasks = this.tareas.filter(tarea => tarea.text.match(this.text));
   }
 }
