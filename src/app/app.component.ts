@@ -19,4 +19,10 @@ export class AppComponent {
   tasksIncomplete() {
     this.tasks = this.tareas.filter(tarea => tarea.completada === false);
   }
+  tasksComplete() {
+    this.tasks = this.tareas.filter(tarea => tarea.completada === true);
+  }
+  allTask() {
+    this.tasks = this.tareas.filter(tarea => this.tareas);
+  }
 }

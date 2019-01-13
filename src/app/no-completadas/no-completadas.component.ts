@@ -10,13 +10,20 @@ import { log } from 'util';
 export class NoCompletadasComponent implements OnInit {
   @Input() arrData: Array<object>;
   @Output() taskIncomplete = new EventEmitter();
+  @Output() taskComplete = new EventEmitter();
+  @Output() allTasks = new EventEmitter();
   tareasSinHacer(id) {
     this.taskIncomplete.emit(id);
+  }
+  tareasHechas(id) {
+    this.taskComplete.emit(id);
+  }
+  todasTareas() {
+    this.allTasks.emit();
   }
   constructor() { }
 
   ngOnInit() {
-    console.log(this.arrData);
   }
 
 }
