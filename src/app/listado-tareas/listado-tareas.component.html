@@ -2,7 +2,7 @@
   <h3>{{ task.text }}</h3>
   <p>{{ task.id }}</p>
   <p>Completada: 
-    <span><input type="checkbox" name="tareaCompletada" [(ngModel)]="task.completada"></span>
+    <span><input type="checkbox" name="tareaCompletada" [(ngModel)]="task.completada" (change)="arrTaskComplete()"></span>
     {{ task.completada }}
   </p>
   <p>Tarea número {{ n +1 }}</p>

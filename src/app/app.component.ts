@@ -8,7 +8,7 @@ import { log } from 'util';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  tareas: Array<Task> = JSON.parse(localStorage.getItem('tareas'));
+  tareas: Array<Task> = JSON.parse(localStorage.getItem('tareas')) || [];
   tasks: Array<Task> = this.tareas;
   // tslint:disable-next-line:no-inferrable-types
   text: string = '';
@@ -30,5 +30,9 @@ export class AppComponent {
   buscarTarea(text: string) {
     this.text = text;
     this.tasks = this.tareas.filter(tarea => tarea.text.match(this.text));
+  }
+  newTasksComplete() {
+    console.log('funcion padre');
+    localStorage.setItem('tareas', JSON.stringify(this.tareas));
   }
 }

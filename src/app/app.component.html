@@ -9,6 +9,6 @@
     (allTasks)="allTask()" (textoTarea)="buscarTarea($event)"></no-completadas>
   </div>
   <div class="lista-tareas">
-    <listado-tareas [arrData]="tasks"></listado-tareas>
+    <listado-tareas [arrData]="tasks" (arrTasksComplete)="newTasksComplete()"></listado-tareas>
   </div>
 </div>
